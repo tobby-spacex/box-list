@@ -4,21 +4,15 @@
 
 <h3 class="page-header" id="text1"> Product Add</h3>
 
+<!-- <form> -->
+<form name="dvd" method="post" action="../lib/product-create.php">
     <div class="text-right">
-        <button type="" class="btn btn-secondary" id="button1">Save</button>
+        <button type="submit" class="btn btn-secondary" id="button1">Save</button>
         <button type="button" class="btn btn-secondary" id="button2">Cancele</button>
     </div>
 
 <div class="about-border"></div>
 
-<!-- <form> -->
-<?php
-    include '../lib/Product.php';
-    $product = new Product();
-    $product->insertDvd();
-?>
-
-<form name="dvd" method="post" action="../lib/Product.php">
 
 <div class="form-group">
         <label>SKU</label>
@@ -51,22 +45,23 @@
     <div id="dvd" class="form">
             <label>Size (MB)</label>
             <input type="text" name="size_mb">
-
-            <input type="submit" value="submit" name="submit" class="btn"/>
             <p class="">"Product description"</p>
+
+
+
     </div>
-</form>  <!--</form>-->
+
 
 
     <div id="furniture" class="form">
             <label>Height (CM)</label>
-            <input type="text" placeholder=" ">
+            <input type="text" name="height">
 
             <label>Width (CM)</label>
-            <input type="text" placeholder=" ">
+            <input type="text" name="width">
 
             <label>Length (CM)</label>
-            <input type="text" placeholder=" ">
+            <input type="text" name="length">
 
             <p class="">"Product description"</p>
     </div>
@@ -74,16 +69,14 @@
 
     <div id="book" class="form">
             <label>Weight (KG)</label>
-            <input type="text" name=" ">
+            <input type="text" name="b_weight">
             <p class="">"Product description"</p>
     </div>
 
+
 </div>
 
-<!-- </form> -->
-
-
-
+   </form>  <!--</form>-->
 
 </div>  <!-- container -->
 

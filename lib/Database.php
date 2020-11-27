@@ -16,11 +16,20 @@ class Database{
 
     public function __construct()
     {
+        $this->connection();
+
+    }
+
+    public function connection(){
         try {
             $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
         } catch (Exception $e) {
             echo "Database connection error". $e->getMessage();
         }
+    }
 
+    public function data_input($query){
+        $this->conn->query($query);
+        $this->conn->close();
     }
 }
