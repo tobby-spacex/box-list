@@ -32,4 +32,26 @@ class Database{
         $this->conn->query($query);
         $this->conn->close();
     }
+
+
+
+    public function selectProduct($table_name){
+        $array = array();
+        $query = "SELECT * FROM " .$table_name. "";
+        $result = mysqli_query($this->conn, $query);
+
+        while($row = mysqli_fetch_assoc($result)){
+            $array[] = $row;
+        }
+        return $array;
+    }
+
+
+    public function deleteProduct($id){
+        $query = "DELETE FROM dvd WHERE id =".$id;
+        mysqli_query($this->conn, $query);
+        echo "run";
+        $this->conn->close();
+    }
+
 }
