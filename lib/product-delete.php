@@ -1,6 +1,6 @@
 <?php
 
-// include 'Product.php';
+ob_start();
 include 'Database.php';
 
 $product = new Database();
@@ -14,5 +14,6 @@ if(isset($_POST['delete'])){
         $product->deleteProduct($id);
     }
 
-    header("Location:index.php");
+    header("Location:http://product-list/");
+    // exit();
 }

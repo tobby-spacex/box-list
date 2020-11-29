@@ -1,5 +1,6 @@
 <?php
 
+
 include 'Product.php';
 
 $product = new Product();
@@ -27,7 +28,6 @@ $product = new Product();
             die;
         }
     }
-
 
 
 

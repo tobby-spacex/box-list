@@ -38,15 +38,14 @@
       </label>
       <br>
 
-        <p><b><?php echo $prod["dvd_sku"];?> </b></p>
-        <p><?php echo $prod["dvd_name"]; ?> </p>
-        <p><?php echo $prod["dvd_price"]; ?> $</p>
-        <p>Size: <?php echo $prod["size_mb"]; ?> MB </p>
+        <p><b><?php echo $prod["dvd_sku"];?></b></p>
+        <p><?php echo $prod["dvd_name"]; ?></p>
+        <p><?php echo $prod["dvd_price"]; ?>$</p>
+        <p>Size: <?php echo $prod["size_mb"]; ?>MB</p>
       </div>
     </div>
-
     <?php
-       }
+          }
     ?>
 
 </form>
