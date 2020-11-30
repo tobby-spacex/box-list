@@ -37,6 +37,16 @@
 
 }
 
+.card{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.cardt{
+  line-height: 80%;
+}
 
 .container-1{
   display: flex;

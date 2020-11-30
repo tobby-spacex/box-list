@@ -11,7 +11,7 @@
 
 <div class="navbar navbar-expand-sm bg-secondary navbar-dark">
 <ul class="navbar-nav">
-<a class="active">AFayziev</a>
+<a class="active" href="http://product-list/">AFayziev</a>
 </ul>
 
 </div>
