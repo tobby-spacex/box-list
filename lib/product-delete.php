@@ -11,6 +11,8 @@ if(isset($_POST['delete'])){
 
         foreach($delt as $del_id){
             $delete = $product->deleteRecordById($conn,$del_id);
+             $product->deleteBookById($conn, $del_id);
+             $product->deleteFurnitureById($conn, $del_id);
             header("Location:http://product-list/");
 //     exit();
 

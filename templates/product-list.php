@@ -1,5 +1,6 @@
 <?php include 'root/header.php';?>
-<?php include 'lib/Database.php';?>
+<!-- <?php include 'lib/Database.php';?> -->
+<?php require_once 'lib/product-fetch.php';?>
 
 <div class="container">
 <div class="row">
@@ -23,12 +24,11 @@
     </div>
 
     <?php
-    $product = new Database();
-    $data = $product->selectProduct('dvd');
-    $data2 = $product->selectProduct('book');
+    // $product = new Database();
+    // $data = $product->selectProduct('dvd');
     // foreach($data2 as $book){
     foreach($data as $prod){
-      // var_dump($prod['dvd_name']);
+      // var_dump($prod[$data]);
 
 
     ?>
@@ -52,12 +52,21 @@
       </div>
   </div>
 
-<!-- Fetching dvd -->
-     <!-- <div class="card" style="width: 12rem; height: 12rem;">
+    <?php
+          }
+    ?>
+
+
+<!-- Fetching book -->
+    <?php
+      foreach($data2 as $book){
+    ?>
+
+     <div class="card" style="width: 12rem; height: 12rem;">
 
     <div class="card-body">
     <label class="checkbox-inline">
-        <input type="checkbox" name= "checkbox[]" value="<?php echo $book["id"];?>">
+        <input type="checkbox" name= "box[]" value="<?php echo $book["id"];?>">
 
     </label>
     <br>
@@ -68,11 +77,39 @@
       <p>Size: <?php echo $book["b_weight"]; ?>Weight</p>
     </div>
     </div>
-    </div> -->
+    </div>
 
     <?php
-          }  //}
+          }
     ?>
+
+    <!-- Fetching furniture -->
+    <?php
+      foreach($data3 as $furniture){
+    ?>
+
+     <div class="card" style="width: 12rem; height: 12rem;">
+
+    <div class="card-body">
+    <label class="checkbox-inline">
+        <input type="checkbox" name= "box[]" value="<?php echo $furniture["id"];?>">
+
+    </label>
+    <br>
+    <div class="cardt text-center">
+      <p class="card-title"><b><?php echo $furniture["f_sku"];?></b></p>
+      <p class=""><?php echo $furniture["f_name"]; ?></p>
+      <p class=""><?php echo $furniture["f_price"]; ?>$</p>
+      <p>Dimension:<small> <?php echo $furniture["f_height"]; ?> x <?php echo $furniture["f_width"]; ?> x <?php echo $furniture["f_length"]; ?></small></p>
+    </div>
+    </div>
+    </div>
+
+    <?php
+          }
+    ?>
+
+
 
 </form>
 </div> <!-- container -->
