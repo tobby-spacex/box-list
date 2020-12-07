@@ -47,11 +47,20 @@ class Database{
     }
 
 
-    public function deleteProduct($id){
-        $query = "DELETE FROM dvd WHERE id =".$id;
-        mysqli_query($this->conn, $query);
-        echo "run";
-        $this->conn->close();
+    // public function deleteProduct($id){
+    //     $query = "DELETE FROM dvd WHERE id =".$id;
+    //     $result = mysqli_query($this->conn, $query);
+    //     echo "run";
+    //     return $result;
+    //     $this->conn->close();
+    // }
+
+
+    public function deleteRecordById($conn,$id) {
+        $query = "DELETE FROM dvd WHERE id='$id'";
+        $result = mysqli_query($this->conn, $query) or die("DataBase Error". $this->conn);
+        // $result = $conn->query($query) or die("Error in query".$conn->error);
+        return $result;
     }
 
 }

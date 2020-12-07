@@ -8,19 +8,21 @@
 <form id="myForm" name="dvd" method="post" action="../lib/product-create.php" class="needs-validation" novalidate>
     <div class="text-right">
         <button type="submit" class="btn btn-secondary" id="button1" >Save</button>
-        <button type="button" class="btn btn-secondary" id="button2">Cancele</button>
+        <button type="button" class="btn btn-secondary" id="button2"><a href="http://product-list/"> Cancel </a></button>
     </div>
 
 <div class="about-border"></div>
 
 
-    <div class="form-group">
+       <div class="form-group">
             <label>SKU</label>
-                <input type="text" name="sku" required>
+            <input type="text" name="sku" id="sku" required>
+
         <div class="invalid-feedback">
             Please, fill the field SKU
         </div>
             </div>
+
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="name" required>
@@ -40,7 +42,7 @@
 <div class="option">
     <div class="form-group">
       <label for="inputState">Type Switcher</label>
-      <select id="inputState" class="form-group"> <!-- class="form-group" -->
+      <select id="inputState" class="form-group" > <!-- class="form-group" -->
         <option selected>Type Switcher</option>
         <option value="dvd">DVD</option>
         <option value="book">Book</option>
