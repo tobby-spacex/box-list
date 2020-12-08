@@ -1,22 +1,24 @@
 <?php include 'root/header.php';?>
-<!-- <?php include 'lib/Database.php';?> -->
 <?php require_once 'lib/product-fetch.php';?>
 
 <div class="container">
 <div class="row">
 
-<!-- <div class="col-sm-12 text-center"> -->
 <div class="col-sm">
 
 
-<h3 class="page-header" id="text1"> Product List</h3>
+
 
 <form action="../lib/product-delete.php" method="post">
+
+
+
     <div class="text-right">
+    <h3 class="page-header" id="text1"> Product List</h3>
         <button type="button" class="btn btn-secondary" id="button1" onClick="document.location.href ='/templates/product-add.php'">Add</button>
-        <button type="submit" class="btn btn-secondary" name="delete" id="button2">Mass Delete</button>
-        <!-- <input type="submit"  name="delete" id="delete" value="Mass Delete"> -->
+        <button type="submit" class="btn btn-secondary" name="delete" id="button2" onclick="return validateForm();">Mass Delete</button>
     </div>
+
 
 
     </div>
@@ -24,12 +26,7 @@
     </div>
 
     <?php
-    // $product = new Database();
-    // $data = $product->selectProduct('dvd');
-    // foreach($data2 as $book){
     foreach($data as $prod){
-      // var_dump($prod[$data]);
-
 
     ?>
 

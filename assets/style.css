@@ -113,9 +113,6 @@
 }
 
 
-
-
-
 .form-control.success i.fa-check-circle {
 	color: #2ecc71;
 	visibility: visible;
@@ -126,4 +123,18 @@
 	visibility: visible;
 }
 
+.page-header{
+  position:absolute;
+  left:20px;
+  top:20px;
+}
 
+.text-right{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-right: 8px;
+}
+
+.about-border{
+  margin-top: 3px;
+}

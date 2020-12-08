@@ -4,18 +4,21 @@
 </style>
 
 <div class="container">
-
+<div class="row">
+<div class="col-sm">
 <h3 class="page-header" id="text1"> Product Add</h3>
 
 <!-- <form> -->
 <form id="myForm" name="dvd" method="post" action="../lib/product-create.php" class="needs-validation" novalidate>
     <div class="text-right">
+    <h3 class="page-header" id="text1"> Product Add</h3>
         <button type="submit" class="btn btn-secondary" id="button1" >Save</button>
         <button type="button" class="btn btn-secondary" id="button2"><a href="http://product-list/"> Cancel </a></button>
     </div>
 
+</div>
 <div class="about-border"></div>
-
+</div>
 
     <div class="form-group">
         <label>SKU</label>
