@@ -15,8 +15,8 @@
 
     <div class="text-right">
     <h3 class="page-header" id="text1"> Product List</h3>
-        <button type="button" class="btn btn-secondary" id="button1" onClick="document.location.href ='/templates/product-add.php'">Add</button>
-        <button type="submit" class="btn btn-secondary" name="delete" id="button2" onclick="return validateForm();">Mass Delete</button>
+        <button type="button" class="btn btn-primary" id="button1" onClick="document.location.href ='/templates/product-add.php'">Add</button>
+        <button type="submit" class="btn btn-danger" name="delete" id="button2" onclick="return validateForm();">Mass Delete</button>
     </div>
 
 
@@ -29,6 +29,7 @@
     foreach($data as $prod){
 
     ?>
+
 
     <!-- Fetching dvd -->
   <div class="card" style="width: 12rem; height: 12rem;">

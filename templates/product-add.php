@@ -1,7 +1,4 @@
 <?php include 'root/header.php';?>
-<style>
-.error {color: #FF0000;}
-</style>
 
 <div class="container">
 <div class="row">
@@ -12,8 +9,10 @@
 <form id="myForm" name="dvd" method="post" action="../lib/product-create.php" class="needs-validation" novalidate>
     <div class="text-right">
     <h3 class="page-header" id="text1"> Product Add</h3>
-        <button type="submit" class="btn btn-secondary" id="button1" >Save</button>
-        <button type="button" class="btn btn-secondary" id="button2"><a href="http://product-list/"> Cancel </a></button>
+        <button type="submit" class="btn btn-primary" id="button1" >Save</button>
+        <!-- <button type="button" class="btn btn-secondary" id="button2"><a href="http://product-list/"> Cancel </a></button> -->
+        <button type="button" class="btn btn-warning" id="button2" onclick="cancelButton();">Cancel </a></button>
+
     </div>
 
 </div>
@@ -60,6 +59,7 @@
     <div id="dvd" class="form">
             <label>Size (MB)</label>
             <input type="text" name="size_mb" >
+            <br>
             <span class="error">* <?php if(isset($mb_error)){?><?php echo $mb_error;?> <?php } ?> </span>
 
             <p class="">"Product description"</p>
@@ -70,14 +70,17 @@
     <div id="furniture" class="form" >
             <label>Height (CM)</label>
             <input type="text" name="height" >
+            <br>
             <span class="error">* <?php if(isset($h_error)){?><?php echo $h_error;?> <?php } ?> </span>
 
             <label>Width (CM)</label>
             <input type="text" name="width" >
+            <br>
             <span class="error">* <?php if(isset($w_error)){?><?php echo $w_error;?> <?php } ?> </span>
 
             <label>Length (CM)</label>
             <input type="text" name="length" >
+            <br>
             <span class="error">* <?php if(isset($l_error)){?><?php echo $l_error;?> <?php } ?> </span>
 
             <p class="">"Product description"</p>
