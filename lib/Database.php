@@ -46,35 +46,26 @@ class Database{
         return $array;
     }
 
-
-    // public function deleteProduct($id){
-    //     $query = "DELETE FROM dvd WHERE id =".$id;
-    //     $result = mysqli_query($this->conn, $query);
-    //     echo "run";
-    //     return $result;
-    //     $this->conn->close();
-    // }
-
-
+ // Funtion to remove DVD product
     public function deleteRecordById($conn,$id) {
         $query = "DELETE FROM dvd WHERE id='$id'";
         $result = mysqli_query($this->conn, $query) or die("DataBase Error". $this->conn);
-        // $result = $conn->query($query) or die("Error in query".$conn->error);
         return $result;
     }
 
 
+ // Funtion to remove Book product
     public function deleteBookById($conn,$id) {
         $query = "DELETE FROM book WHERE id='$id'";
         $result = mysqli_query($this->conn, $query);
-        // $result = $conn->query($query) or die("Error in query".$conn->error);
         return $result;
     }
 
+
+ // Funtion to remove Furniture product
     public function deleteFurnitureById($conn,$id) {
         $query = "DELETE FROM furniture WHERE id='$id'";
         $result = mysqli_query($this->conn, $query) or die("DataBase Error". $this->conn);
-        // $result = $conn->query($query) or die("Error in query".$conn->error);
         return $result;
     }
 

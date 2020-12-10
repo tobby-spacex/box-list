@@ -82,8 +82,10 @@
 }
 
 #furniture{
-  width: 325px;
-  height: 210px;
+  /* width: 325px;
+  height: 210px; */
+  width: 550px;
+  height: 270px;
 }
 
 #furniture input{

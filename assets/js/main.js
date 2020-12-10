@@ -1,4 +1,6 @@
 
+// method for dynamically switching type
+
 $(document).ready(function(){
     $("#inputState").on('change', function(){
         $(".form").hide();
@@ -6,6 +8,8 @@ $(document).ready(function(){
     }).change();
 });
 
+
+// method for deleting cells
 
 function validateForm() {
     var count_checked = $("[name='box[]']:checked").length;
@@ -17,7 +21,7 @@ function validateForm() {
     }
 }
 
-
+// cancel button which returns to main page
 
 function cancelButton(){
     window.location.replace("http://product-list/");

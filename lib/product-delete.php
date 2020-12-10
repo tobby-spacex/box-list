@@ -3,7 +3,7 @@
 ob_start();
 include 'Database.php';
 
-// $product = new Database();
+//the given expression for deletion, if the checkbox is selected, then it calls the class object
 
 if(isset($_POST['delete'])){
      $delt = $_POST['box'];
@@ -14,27 +14,7 @@ if(isset($_POST['delete'])){
              $product->deleteBookById($conn, $del_id);
              $product->deleteFurnitureById($conn, $del_id);
             header("Location:http://product-list/");
-//     exit();
 
         }
 
-
-
 }
-
-
-
-
-// if(isset($_POST['delete'])){
-//     $check = $_POST['box'];
-//     foreach($check as $id){
-
-//         // var_dump($check);
-//         var_dump($id);
-//         $product->deleteProduct($id);
-//     }
-
-//     // header("Location:http://product-list/");
-//     // exit();
-// }
-

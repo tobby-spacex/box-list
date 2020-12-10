@@ -30,25 +30,6 @@ include 'Database.php';
         echo "done";
     }
 
-    // public function deleteProduct($id){
-    //     $query = "DELETE FROM dvd WHERE id = '".$id."' ";
-    //     $this->db->data_input($query);
-    //     echo "done";
-    // }
-
-
-    //for selectiong product
-    // public function selectProduct($table_name){
-    //     $array = array();
-    //     $query = "SELECT * FROM " .$table_name. "";
-    //     $conn = $this->db->connection();
-    //     $result = mysqli_query($conn, $query);
-
-    //     while($row = mysqli_fetch_assoc($result)){
-    //         $array[] = $row;
-    //     }
-    //     return $array;
-    // }
 
 }
 

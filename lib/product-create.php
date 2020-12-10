@@ -2,7 +2,6 @@
 
 ob_start();
 include 'Product.php';
-// $product = new Product();
 
     $sku = filter_input(INPUT_POST, 'sku');
     $name = filter_input(INPUT_POST, 'name');
@@ -15,6 +14,7 @@ include 'Product.php';
     $width = filter_input(INPUT_POST, 'width');
     $length = filter_input(INPUT_POST, 'length');
 
+    // SKU, Name, Price  input validation
     if(empty($sku)){
         $sku_error = 'Please insert SKU.';
     }elseif(iconv_strlen($sku)<5){
@@ -35,14 +35,14 @@ include 'Product.php';
 
     // DVD input validation
     if(empty($size_mb)){
-        $mb_error = 'Please insert DVD size.';
+        $mb_error = '*Please insert DVD size.';
     }elseif(preg_match( "/[^0-9]/", $size_mb)){
         $mb_error = 'Only integer numbers are allowed..';
     }
 
     // Book input validation
     if(empty($book_weight)){
-        $boo_error = 'Please insert Book size.';
+        $boo_error = '*Please insert Book size.';
     }elseif(preg_match( "/[^0-9,.]/", $book_weight)){
         $boo_error = 'Only integers and rational numbers are allowed.';
     }
@@ -51,9 +51,9 @@ include 'Product.php';
     // Furniture input validation
 
     if(empty($height) && empty($width) && empty($length)){
-        $h_error = 'Please insert Furniture height.';
-        $w_error = 'Please insert Furniture width.';
-        $l_error = 'Please insert Furniture lenght.';
+        $h_error = '*Please insert Furniture height.';
+        $w_error = '*Please insert Furniture width.';
+        $l_error = '*Please insert Furniture lenght.';
     }elseif(preg_match( "/[^0-9,.]/", $height)){
         $h_error = 'Only integers and rational numbers are allowed.';
     }elseif(preg_match( "/[^0-9,.]/", $width)){
@@ -62,10 +62,11 @@ include 'Product.php';
         $l_error = 'Only integers and rational numbers are allowed.';
     }
 
-
+    // if it encounters an error, it stays on the current page
     require_once('../templates/product-add.php');
 
 
+// If there are no errors, it connects the database and insert data into the database.
 
     if(empty($sku_error) && empty($name_error) && empty($price_error) && empty($mb_error)){
 
@@ -75,20 +76,12 @@ include 'Product.php';
         $product = new Product();
         $product->insertDvd($dvd);
         header("Location:http://product-list/");
+        //after successful insert, returns to the main page
 
     }
 
 
-    // if(empty($sku_error) && empty($name_error) && empty($price_error) && empty($boo_error)){
-    //     $book_array = array("sku", "name", "price", "book_weight");
-    //     $book = compact($book_array);
-    //     var_dump($book);
-    //     die;
-    //     $product = new Product();
-    //     $product->insertBook($book);
-    //     header("Location:http://product-list/");
-    // }
-
+// If there are no errors, it connects the database and insert data into the database.
 
     if(empty($sku_error) && empty($name_error) && empty($price_error) && empty($h_error) && empty($w_error) && empty($l_error)){
 
@@ -100,6 +93,8 @@ include 'Product.php';
         header("Location:http://product-list/");
     }
 
+
+// If there are no errors, it connects the database and insert data into the database.
 
     if(empty($sku_error) && empty($name_error) && empty($price_error) && empty($boo_error)){
     if(isset($_POST['sku']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['b_weight'])){
